@@ -1,12 +1,24 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
 import Footer from '../components/Footer.vue';
+import request from '../request';
 const user = reactive({
     username: '',
     password: '',
 })
-const onSubmit = () => {
+const onSubmit = async () => {
     console.log(user)
+    try {
+        const response = await request.post('/api/login', user)
+        console.log('登录响应', response.data)
+        if (response.data.code == 0) {
+            console.log('登录成功')
+        } else {
+            console.log('登录失败')
+        }
+    } catch (e) {
+        console.log('登录失败', e)
+    }
 }
 </script>
 

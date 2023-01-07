@@ -28,4 +28,12 @@ export default defineConfig({
       ],
     }),
   ],
+  server: {
+    proxy: {
+      "/api": {// 发往 /api 的请求
+        target: "http://localhost:8080",// 都会被 vite 转发到这里
+        changeOrigin: true,
+      },
+    }
+  },
 })
