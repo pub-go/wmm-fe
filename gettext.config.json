@@ -1,0 +1,17 @@
+{
+    "input": {
+        "path": "./src",
+        "include": [
+            "**/*.vue",
+            "**/*.ts",
+            "**/*.js"
+        ]
+    },
+    "output": {
+        "path": "./src/assets/language",
+        "locales": [
+            "zh"
+        ],
+        "linguas": false
+    }
+}

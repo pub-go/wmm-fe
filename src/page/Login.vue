@@ -26,14 +26,14 @@ const onSubmit = async () => {
     <el-container>
         <el-main>
             <el-form label-width="100px" p-2 rounded :model="user" class="bg">
-                <el-form-item label="用户名">
+                <el-form-item :label="$gettext('Username')">
                     <el-input v-model="user.username" />
                 </el-form-item>
-                <el-form-item label="密码">
+                <el-form-item :label="$gettext('Password')">
                     <el-input type="password" v-model="user.password" />
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" @click="onSubmit">登录</el-button>
+                    <el-button type="primary" @click="onSubmit">{{ $gettext("Login") }}</el-button>
                 </el-form-item>
             </el-form>
         </el-main>

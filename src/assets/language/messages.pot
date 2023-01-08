@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: src/page/Login.vue:12
+msgid "Login"
+msgstr ""
+
+#: src/page/Login.vue:8
+msgid "Password"
+msgstr ""
+
+#: src/page/Login.vue:5
+msgid "Username"
+msgstr ""
